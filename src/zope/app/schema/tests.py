@@ -1,5 +1,6 @@
+import doctest
 import unittest
-from zope.testing import doctest
+
 from zope.app.testing import setup
 from zope.app.schema.vocabulary import _clear
 
