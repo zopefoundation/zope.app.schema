@@ -16,15 +16,14 @@
 $Id$
 """
 import zope.component
-from zope.interface import implements
+from zope.interface import implementer
 from zope.schema.interfaces import IVocabularyRegistry
 from zope.schema import vocabulary
 from zope.schema.interfaces import IVocabularyFactory
 
+@implementer(IVocabularyRegistry)
 class ZopeVocabularyRegistry(object):
     """IVocabularyRegistry that supports global and local utilities."""
-
-    implements(IVocabularyRegistry)
     __slots__ = ()
 
     def get(self, context, name):

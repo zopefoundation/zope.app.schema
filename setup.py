@@ -24,6 +24,9 @@ from setuptools import setup, find_packages
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
+TESTS_REQUIRE = [
+]
+
 setup(name='zope.app.schema',
       version='3.6.1.dev0',
       author='Zope Corporation and Contributors',
@@ -52,12 +55,16 @@ setup(name='zope.app.schema',
       packages=find_packages('src'),
       package_dir = {'': 'src'},
       namespace_packages=['zope', 'zope.app'],
-      extras_require = dict(test=['zope.app.testing']),
-      install_requires=['setuptools',
-                        'zope.component',
-                        'zope.interface',
-                        'zope.schema',
-                        ],
+      extras_require = dict(
+          test=TESTS_REQUIRE),
+      install_requires=[
+          'setuptools',
+          'zope.component',
+          'zope.interface',
+          'zope.schema',
+          ],
       include_package_data = True,
+      tests_require=TESTS_REQUIRE,
+      test_suite='zope.app.schema.tests.test_suite',
       zip_safe = False,
       )

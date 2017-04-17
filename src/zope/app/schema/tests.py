@@ -1,15 +1,15 @@
 import doctest
 import unittest
 
-from zope.app.testing import setup
+from zope.component import testing
 from zope.app.schema.vocabulary import _clear
 
 def setUp(test):
-    setup.placefulSetUp()
+    testing.setUp()
     _clear()
 
 def tearDown(test):
-    setup.placefulTearDown()
+    testing.tearDown()
 
 def test_suite():
     return unittest.TestSuite((
