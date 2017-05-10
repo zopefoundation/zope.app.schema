@@ -1,5 +1,8 @@
 <configure xmlns="http://namespaces.zope.org/zope" i18n_domain="zope">
 
+  <include package="zope.security" file="meta.zcml" />
+  <include package="zope.security" />
+
   <class class="zope.schema.Field">
 
     <factory
@@ -208,7 +211,7 @@
     <factory
         id="zope.schema.Choice"
         title="Choice Field"
-        description="Choice Field" 
+        description="Choice Field"
         />
 
     <require like_class="zope.schema.Field" />
@@ -267,7 +270,7 @@
     <factory
         id="zope.schema.Date"
         title="Date Field"
-        description="Date Field" 
+        description="Date Field"
         />
 
     <require like_class="zope.schema.Orderable" />
@@ -280,7 +283,7 @@
     <factory
         id="zope.schema.Timedelta"
         title="Timedelta Field"
-        description="Timedelta Field" 
+        description="Timedelta Field"
         />
 
     <require like_class="zope.schema.Orderable" />
@@ -329,7 +332,7 @@
     <factory
         id="zope.schema.DottedName"
         title="Dotted Name"
-        description="Dotted Name" 
+        description="Dotted Name"
         />
 
     <require like_class="zope.schema.MinMaxLen" />
