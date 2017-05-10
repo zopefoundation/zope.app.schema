@@ -13,7 +13,6 @@
 ##############################################################################
 """Implementation of ZCML action to register vocabulary factories.
 
-$Id$
 """
 import zope.component
 from zope.interface import implementer
@@ -44,7 +43,7 @@ def _clear():
 _clear()
 try:
     from zope.testing import cleanup
-except ImportError:
+except ImportError: # pragma: no cover
     pass
 else:
     cleanup.addCleanUp(_clear)

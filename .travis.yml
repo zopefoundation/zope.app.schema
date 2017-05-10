@@ -22,4 +22,4 @@ install:
 cache: pip
 
 before_cache:
-    - rm -f $HOME/.cache/pip/log/debug.log
+  - rm -f $HOME/.cache/pip/log/debug.log
