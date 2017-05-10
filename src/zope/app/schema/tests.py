@@ -1,19 +1,17 @@
 import doctest
 import unittest
 
-from zope.component import testing
-from zope.app.schema.vocabulary import _clear
+from zope.testing import cleanup
 
-def setUp(test):
-    testing.setUp()
-    _clear()
+def setUp(_test):
+    cleanup.setUp()
 
-def tearDown(test):
-    testing.tearDown()
+def tearDown(_test):
+    cleanup.tearDown()
 
 def test_suite():
     return unittest.TestSuite((
-        doctest.DocFileSuite('README.txt',
+        doctest.DocFileSuite('README.rst',
                      setUp=setUp, tearDown=tearDown,
                      optionflags=doctest.NORMALIZE_WHITESPACE|doctest.ELLIPSIS,
                      ),

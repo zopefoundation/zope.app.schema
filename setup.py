@@ -24,25 +24,30 @@ from setuptools import setup, find_packages
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
+ZCML_REQUIRE = [
+    'zope.configuration',
+    'zope.security',
+]
+
 TESTS_REQUIRE = [
     'zope.testing',
     'zope.testrunner',
-]
+] + ZCML_REQUIRE
 
 setup(name='zope.app.schema',
-      version='4.0.2.dev0',
+      version='4.1.0.dev0',
       author='Zope Corporation and Contributors',
       author_email='zope-dev@zope.org',
       description='Component Architecture based Vocabulary Registry',
       long_description=(
-          read('README.txt')
+          read('README.rst')
           + '\n\n' +
-          read('src', 'zope', 'app', 'schema', 'README.txt')
+          read('src', 'zope', 'app', 'schema', 'README.rst')
           + '\n\n' +
-          read('CHANGES.txt')
+          read('CHANGES.rst')
           ),
-      keywords = "zope3 vocabulary registry local component",
-      classifiers = [
+      keywords="zope3 vocabulary registry local component",
+      classifiers=[
           'Development Status :: 5 - Production/Stable',
           'Environment :: Web Environment',
           'Intended Audience :: Developers',
@@ -63,18 +68,18 @@ setup(name='zope.app.schema',
       url='http://pypi.python.org/pypi/zope.app.schema',
       license='ZPL 2.1',
       packages=find_packages('src'),
-      package_dir = {'': 'src'},
+      package_dir={'': 'src'},
       namespace_packages=['zope', 'zope.app'],
-      extras_require = dict(
-          test=TESTS_REQUIRE),
+      extras_require={
+          'test': TESTS_REQUIRE,
+          'zcml': ZCML_REQUIRE,
+      },
       install_requires=[
           'setuptools',
-          'zope.component',
-          'zope.interface',
-          'zope.schema',
+          'zope.vocabularyregistry >= 1.0.0',
       ],
-      include_package_data = True,
+      include_package_data=True,
       tests_require=TESTS_REQUIRE,
       test_suite='zope.app.schema.tests.test_suite',
-      zip_safe = False,
-      )
+      zip_safe=False,
+)

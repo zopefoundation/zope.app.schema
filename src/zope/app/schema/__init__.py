@@ -13,7 +13,6 @@
 ##############################################################################
 """Schemas
 
-$Id$
 """
 # we want to hook-up our own vocabulary registry; importing the module
 # is enough for that
