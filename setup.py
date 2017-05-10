@@ -30,7 +30,7 @@ TESTS_REQUIRE = [
 ]
 
 setup(name='zope.app.schema',
-      version='4.0.1.dev0',
+      version='4.0.1',
       author='Zope Corporation and Contributors',
       author_email='zope-dev@zope.org',
       description='Component Architecture based Vocabulary Registry',

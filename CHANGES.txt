@@ -2,7 +2,7 @@
 CHANGES
 =======
 
-4.0.1 (unreleased)
+4.0.1 (2017-05-10)
 ------------------
 
 - Packaging: Add the Python version and implementation classifiers.
