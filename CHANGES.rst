@@ -2,7 +2,7 @@
  CHANGES
 =========
 
-4.0.2 (unreleased)
+4.1.0 (2017-05-10)
 ==================
 
 - Replaced the local implementation of ``ZopeVocabularyRegistry`` with
