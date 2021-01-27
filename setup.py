@@ -21,8 +21,10 @@
 import os
 from setuptools import setup, find_packages
 
+
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
+
 
 ZCML_REQUIRE = [
     'zope.configuration',
@@ -45,7 +47,7 @@ setup(name='zope.app.schema',
           read('src', 'zope', 'app', 'schema', 'README.rst')
           + '\n\n' +
           read('CHANGES.rst')
-          ),
+      ),
       keywords="zope3 vocabulary registry local component",
       classifiers=[
           'Development Status :: 5 - Production/Stable',
@@ -58,6 +60,9 @@ setup(name='zope.app.schema',
           'Programming Language :: Python :: 3',
           'Programming Language :: Python :: 3.5',
           'Programming Language :: Python :: 3.6',
+          'Programming Language :: Python :: 3.7',
+          'Programming Language :: Python :: 3.8',
+          'Programming Language :: Python :: 3.9',
           'Programming Language :: Python :: Implementation :: CPython',
           'Programming Language :: Python :: Implementation :: PyPy',
           'Natural Language :: English',
@@ -82,4 +87,4 @@ setup(name='zope.app.schema',
       tests_require=TESTS_REQUIRE,
       test_suite='zope.app.schema.tests.test_suite',
       zip_safe=False,
-)
+      )
