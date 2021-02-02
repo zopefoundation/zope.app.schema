@@ -16,6 +16,7 @@ Backward-compatibility imports. The primary home of these objects is now
 zope.vocabularyregistry.registry.
 """
 
+# BBB
 from zope.schema.interfaces import IVocabularyRegistry
 from zope.schema.interfaces import IVocabularyFactory
 from zope.vocabularyregistry.registry import ZopeVocabularyRegistry
