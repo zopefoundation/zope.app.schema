@@ -39,7 +39,7 @@ TESTS_REQUIRE = [
 ] + ZCML_REQUIRE
 
 setup(name='zope.app.schema',
-      version='5.0.dev0',
+      version='5.0',
       author='Zope Corporation and Contributors',
       author_email='zope-dev@zope.dev',
       description='Component Architecture based Vocabulary Registry',
