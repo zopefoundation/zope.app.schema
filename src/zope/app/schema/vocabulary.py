@@ -17,7 +17,7 @@ zope.vocabularyregistry.registry.
 """
 
 # BBB
-from zope.schema.interfaces import IVocabularyRegistry
 from zope.schema.interfaces import IVocabularyFactory
+from zope.schema.interfaces import IVocabularyRegistry
 from zope.vocabularyregistry.registry import ZopeVocabularyRegistry
 from zope.vocabularyregistry.registry import vocabularyRegistry

@@ -12,14 +12,16 @@
 #
 ##############################################################################
 # This package is developed by the Zope Toolkit project, documented here:
-# http://docs.zope.org/zopetoolkit
+# https://zopetoolkit.readthedocs.io/
 # When developing and releasing this package, please follow the documented
 # Zope Toolkit policies as described by this documentation.
 ##############################################################################
 """Setup for zope.app.schema package
 """
 import os
-from setuptools import setup, find_packages
+
+from setuptools import find_packages
+from setuptools import setup
 
 
 def read(*rnames):
@@ -37,9 +39,9 @@ TESTS_REQUIRE = [
 ] + ZCML_REQUIRE
 
 setup(name='zope.app.schema',
-      version='4.2.0.dev0',
+      version='5.0.dev0',
       author='Zope Corporation and Contributors',
-      author_email='zope-dev@zope.org',
+      author_email='zope-dev@zope.dev',
       description='Component Architecture based Vocabulary Registry',
       long_description=(
           read('README.rst')
@@ -55,14 +57,12 @@ setup(name='zope.app.schema',
           'Intended Audience :: Developers',
           'License :: OSI Approved :: Zope Public License',
           'Programming Language :: Python',
-          'Programming Language :: Python :: 2',
-          'Programming Language :: Python :: 2.7',
           'Programming Language :: Python :: 3',
-          'Programming Language :: Python :: 3.5',
-          'Programming Language :: Python :: 3.6',
           'Programming Language :: Python :: 3.7',
           'Programming Language :: Python :: 3.8',
           'Programming Language :: Python :: 3.9',
+          'Programming Language :: Python :: 3.10',
+          'Programming Language :: Python :: 3.11',
           'Programming Language :: Python :: Implementation :: CPython',
           'Programming Language :: Python :: Implementation :: PyPy',
           'Natural Language :: English',
@@ -70,11 +70,12 @@ setup(name='zope.app.schema',
           'Topic :: Internet :: WWW/HTTP',
           'Framework :: Zope :: 3',
       ],
-      url='http://pypi.python.org/pypi/zope.app.schema',
+      url='https://github.com/zopefoundation/zope.app.schema',
       license='ZPL 2.1',
       packages=find_packages('src'),
       package_dir={'': 'src'},
       namespace_packages=['zope', 'zope.app'],
+      python_requires='>=3.7',
       extras_require={
           'test': TESTS_REQUIRE,
           'zcml': ZCML_REQUIRE,
@@ -84,7 +85,5 @@ setup(name='zope.app.schema',
           'zope.vocabularyregistry >= 1.0.0',
       ],
       include_package_data=True,
-      tests_require=TESTS_REQUIRE,
-      test_suite='zope.app.schema.tests.test_suite',
       zip_safe=False,
       )
